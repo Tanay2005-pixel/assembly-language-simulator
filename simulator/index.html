@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8085 Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul class="sidebar-menu">
+            <li><a href="#" onclick="selectMenu('Code Panel')">Code Panel</a></li>
+            <li><a href="#" onclick="selectMenu('Memory Read')">Memory Read</a></li>
+            <li><a href="#" onclick="selectMenu('Register Status')">Register Status</a></li>
+            <li><a href="#" onclick="selectMenu('Saved Files')">Saved Files</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <button class="hamburger" onclick="toggleSidebar()">&#9776;</button>
+        <div class="top-middle">
+            <button>Enter Starting Memory</button>
+        </div>
+        <div class="top-right">
+            <button>Logout/Login</button>
+        </div>
+    </header>
+    <main>
+        <textarea id="code-area" placeholder="Write your code here..."></textarea>
+    </main>
+    <footer>
+        <button>Save Code</button>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function selectMenu(option) {
+            console.log('Selected: ' + option);
+            toggleSidebar();
+        }
+    </script>
+</body>
+</html>

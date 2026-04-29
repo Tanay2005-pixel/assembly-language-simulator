@@ -28,6 +28,14 @@ public class CPU {
         stackPointer.set(0xFFFF);
         halted = false;
     }
+    
+    public void softReset() {
+        registers.reset();
+        flags.reset();
+        programCounter.set(0);
+        stackPointer.set(0xFFFF);
+        halted = false;
+    }
 
     public void printState() {
         System.out.println("Registers: " + registers);

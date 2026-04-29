@@ -38,7 +38,7 @@ public class InstructionParser {
 
             String error = Validator.validateLine(tokens);
             if (error != null) {
-                System.out.println("[PARSE ERROR] " + error + "  →  line: \"" + rawLine.trim() + "\"");
+                System.out.println("ERROR is " + error + "  →  line: \"" + rawLine.trim() + "\"");
                 continue;
             }
 

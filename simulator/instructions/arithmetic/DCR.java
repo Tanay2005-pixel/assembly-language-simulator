@@ -3,7 +3,7 @@ package simulator.instructions.arithmetic;
 import simulator.cpu.CPU;
 import simulator.instructions.Instruction;
 
-// DCR reg  →  reg = reg - 1  (carry NOT affected)
+// DCR reg  ->  reg = reg - 1  (carry NOT affected)
 public class DCR implements Instruction {
     private final String register;
     public DCR(String register) { this.register = register; }

@@ -14,7 +14,7 @@ public class INX implements Instruction {
             case "B":  cpu.registers.setBC((cpu.registers.getBC() + 1) & 0xFFFF); break;
             case "D":  cpu.registers.setDE((cpu.registers.getDE() + 1) & 0xFFFF); break;
             case "H":  cpu.registers.setHL((cpu.registers.getHL() + 1) & 0xFFFF); break;
-            case "SP": cpu.sp.set((cpu.sp.get() + 1) & 0xFFFF); break;
+            case "SP": cpu.stackPointer.set((cpu.stackPointer.get() + 1) & 0xFFFF); break;
             default: throw new IllegalArgumentException("INX: unknown pair " + pair);
         }
     }

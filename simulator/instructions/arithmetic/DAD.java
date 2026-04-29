@@ -3,7 +3,7 @@ package simulator.instructions.arithmetic;
 import simulator.cpu.CPU;
 import simulator.instructions.Instruction;
 
-// DAD rp  →  HL = HL + register pair  (only carry affected)
+// DAD rp  ->  HL = HL + register pair  (only carry affected)
 public class DAD implements Instruction {
     private final String pair;
     public DAD(String pair) { this.pair = pair.toUpperCase(); }
@@ -16,7 +16,7 @@ public class DAD implements Instruction {
             case "B":  val = cpu.registers.getBC(); break;
             case "D":  val = cpu.registers.getDE(); break;
             case "H":  val = cpu.registers.getHL(); break;
-            case "SP": val = cpu.sp.get();          break;
+            case "SP": val = cpu.stackPointer.get();          break;
             default: throw new IllegalArgumentException("DAD: unknown pair " + pair);
         }
         int result = hl + val;
